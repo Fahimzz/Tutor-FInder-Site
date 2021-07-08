@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width: 200px;
+        border-radius: 10%;
+      }
+
+      .button {
+        background-color: white;
+        color: black;
+        border: 2px solid #5f1782;
+      }
+
+      .button:hover {
+        background-color: #5f1782;
+        color: white;
+      }
+      #demo {
+        text-align: center;
+        font-size: 30px;
+      }
+      #h2 {
+        color: #5f1782;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <h2 id="h2">Our Mission</h2>
+      <div id="div">
+        We make it easy for anyone to help a teacher in need, moving us closer
+        to a nation where students in every community have the tools and
+        experiences they need for a great education. But we can not do it alone.
+        Join us!
+      </div>
+      <br />
+      <br />
+      <button
+        type="button"
+        class="button"
+        onclick="loadDoc('Creaters.php', myFunction)"
+      >
+        Creators
+      </button>
+      <button
+        type="button"
+        class="button"
+        onclick="loadDoc('signUPoptionPage.php', myFunction)"
+      >
+        Join Now!
+      </button>
+    </div>
+
+    <script>
+      function loadDoc(url, cFunction) {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            cFunction(this);
+          }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+      }
+      function myFunction(xhttp) {
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+      }
+    </script>
+  </body>
+</html>

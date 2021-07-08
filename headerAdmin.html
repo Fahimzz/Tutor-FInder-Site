@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/style_Zahin.css?version=1"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="topnav2" id="myTopnav">
+      <img id="logo" src="logo.png" />
+      <a href="logout.php">Log Out</a>
+      <a href="updatePassAdmin.php">Update Password</a>
+      <a href="admin_registration.php">Add admin</a>
+      <a href="admins_info.php">Admin info</a>
+      <a href="RankHistory.php">Change history</a>
+      <a href="verifyTutor.php">Tutor Verify</a>
+      <a href="showAllBlogPosts.php">Post Blog</a>
+      <a href="HomePageAdmin.php">Home</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav2") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav2";
+        }
+      }
+    </script>
+  </body>
+</html>
